@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Cyber Security Icebreaker</title>
     <style>
+        /* Grundlayout */
         body {
             font-family: Arial, sans-serif;
             background: #f4f4f4;
@@ -15,6 +16,8 @@
             margin: 0;
             padding: 20px;
         }
+
+        /* Box mit Scrollbar */
         .box {
             background: white;
             padding: 40px;
@@ -23,22 +26,26 @@
             max-width: 600px;
             width: 100%;
             text-align: left;
-            max-height: 90vh; /* Box max. 90% der Bildschirmhöhe */
-            overflow-y: auto; /* Scrollbar, wenn Text zu lang ist */
+            max-height: 90vh; /* max. Höhe der Box */
+            overflow-y: auto; /* Scrollbar, wenn Text zu lang */
         }
+
         h1 {
             color: #c62828;
             font-size: 1.8em;
             margin-top: 0;
         }
+
         p {
             font-size: 1.2em;
             line-height: 1.4;
         }
+
+        /* Logo */
         .logo {
             display: block;
-            margin: 0 auto 20px auto; /* Logo zentriert */
-            max-width: 100%;           /* passt sich der Box-Breite an */
+            margin: 0 auto 20px auto; /* zentriert, Abstand unten */
+            max-width: 100%;           /* passt sich der Box an */
             height: auto;              /* proportional */
         }
 
@@ -46,7 +53,32 @@
         @media (max-width: 600px) {
             .box {
                 padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- Logo einfügen -->
+        <img src="Logo.png" alt="Firmenlogo" class="logo">
 
+        <h1>Bevor wir die Antwort geben…</h1>
 
+        <p>Sie haben gerade einen QR-Code gescannt, ohne zu wissen, wer ihn erstellt hat oder wohin er führt.</p>
 
+        <p>Genau so beginnen heute viele Cyberangriffe – auch in der Pharmaindustrie.</p>
 
+        <p>QR-Codes werden genutzt, um Mitarbeitende auf gefälschte Login-Seiten oder Downloads zu locken. 
+        Von dort gelangen Angreifer oft ins Unternehmensnetz – und im schlimmsten Fall bis in Produktionssysteme.</p>
+
+        <p><strong>Willkommen zu unserer Präsentation über<br>
+        CYBER RISK & CYBER SECURITY TRENDS 2025.</strong></p>
+    </div>
+</body>
+</html>
