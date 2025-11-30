@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             background: #f4f4f4;
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Desktop: Box zentriert */
             align-items: center;
             height: 100vh;
             margin: 0;
@@ -26,8 +26,8 @@
             max-width: 600px;
             width: 100%;
             text-align: left;
-            max-height: 90vh; /* max. Höhe der Box */
-            overflow-y: auto; /* Scrollbar, wenn Text zu lang */
+            max-height: 90vh;
+            overflow-y: auto;
         }
 
         h1 {
@@ -41,19 +41,25 @@
             line-height: 1.4;
         }
 
-        /* Logo linksbündig und größere Darstellung auf Mobilgeräten */
+        /* Logo linksbündig */
         .logo {
             display: block;
-            margin: 0 0 20px 0; /* linksbündig, Abstand unten */
+            margin: 0 0 20px 0;
             width: auto;
-            max-width: 250px; /* Logo auf iPhone größer */
+            max-width: 250px;
             height: auto;
         }
 
         /* Mobile Optimierung */
         @media (max-width: 600px) {
-            .box {
+            body {
+                justify-content: flex-start; /* Box links oben */
+                align-items: flex-start;
                 padding: 20px;
+            }
+            .box {
+                max-width: 100%; /* volle Breite */
+                width: 100%;
             }
             h1 {
                 font-size: 2em;
@@ -61,18 +67,21 @@
             p {
                 font-size: 1.4em;
             }
+            .logo {
+                max-width: 90%; /* Logo größer */
+            }
         }
 
         @media (max-width: 400px) {
             .logo {
-                max-width: 80%; /* kleine Smartphones: flexibles Logo */
+                max-width: 80%; /* kleine Smartphones */
             }
         }
     </style>
 </head>
 <body>
     <div class="box">
-        <!-- Logo einfügen -->
+        <!-- Logo -->
         <img src="Logo.png" alt="Firmenlogo" class="logo">
 
         <h1>Bevor wir die Antwort geben…</h1>
@@ -81,10 +90,4 @@
 
         <p>So starten viele Cyberangriffe – auch in der Pharmaindustrie.</p>
 
-        <p>QR-Codes können Mitarbeitende auf gefälschte Seiten locken und Angreifern den Zugang zum Unternehmensnetz ermöglichen.</p>
-
-        <p><strong>Willkommen zur Präsentation:<br>
-        CYBER RISK & CYBER SECURITY TRENDS 2025</strong></p>
-    </div>
-</body>
-</html>
+        <p>QR-Codes können Mitarbeitende auf gefälschte Seiten locken und Angreifern den Zugang zu
