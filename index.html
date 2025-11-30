@@ -41,12 +41,13 @@
             line-height: 1.4;
         }
 
-        /* Logo */
+        /* Logo linksbündig und größere Darstellung auf Mobilgeräten */
         .logo {
             display: block;
-            margin: 0 0 20px 0; /* links bündig, Abstand unten */
-            max-width: 100%;           /* passt sich der Box an */
-            height: auto;              /* proportional */
+            margin: 0 0 20px 0; /* linksbündig, Abstand unten */
+            width: auto;
+            max-width: 250px; /* Logo auf iPhone größer */
+            height: auto;
         }
 
         /* Mobile Optimierung */
@@ -59,6 +60,12 @@
             }
             p {
                 font-size: 1.4em;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .logo {
+                max-width: 80%; /* kleine Smartphones: flexibles Logo */
             }
         }
     </style>
@@ -81,6 +88,3 @@
     </div>
 </body>
 </html>
-
-
-
